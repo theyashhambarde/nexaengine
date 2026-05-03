@@ -1,0 +1,14 @@
+services:
+  nexa:
+    image: itzcrazykns1337/nexa:latest
+    build:
+      context: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - data:/home/nexa/data
+    restart: unless-stopped
+
+volumes:
+  data:
+    name: 'nexa-data'
